@@ -93,7 +93,7 @@
   });
     viewer.dataSources.add(fpSource);
 
-    footprint = dataSource.entities.values.find((entity) =>
+    footprint = fpSource.entities.values.find((entity) =>
     Cesium.defined(entity.polygon)
     );
     footprint.polygon.outline = false;
@@ -114,6 +114,8 @@
     // Add the clipping polygon collection to the global tileset
     buildingTileset.clippingPolygons = clippingPolygons;
     
+    // Add bike stations to viewer
+    loadCitiBikeStations(viewer);
 
   </script>
  </div>
