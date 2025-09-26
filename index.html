@@ -93,7 +93,7 @@
   });
     viewer.dataSources.add(fpSource);
 
-    footprint = fpSource.entities.values.find((entity) =>
+    const footprint = fpSource.entities.values.find((entity) =>
     Cesium.defined(entity.polygon)
     );
     footprint.polygon.outline = false;
